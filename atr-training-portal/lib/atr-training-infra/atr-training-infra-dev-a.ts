@@ -132,10 +132,6 @@ export class ATRTrainingInfraDevA extends Stack {
           description: 'Allow inbound access from 10.0.0.0/16 to EFS',
           allowAllOutbound: true,
         });
-
-        const fileSystemPolicy = new iam.PolicyDocument({
-          statements: [],
-        });
         
 
         // Allow inbound access from the desired IP range.
@@ -144,10 +140,10 @@ export class ATRTrainingInfraDevA extends Stack {
         const fileSystem = new efs.FileSystem(this, 'EfsFileSystemDevA', {
             vpc: existingVpc,
             securityGroup: efsSecurityGroup,
+            allowAnonymousAccess: true,
             lifecyclePolicy: efs.LifecyclePolicy.AFTER_30_DAYS, // or another appropriate policy
             removalPolicy: RemovalPolicy.DESTROY, // This will delete the EFS file system when the stack is deleted
             vpcSubnets: { subnetType: SubnetType.PRIVATE_WITH_EGRESS },
-            fileSystemPolicy: fileSystemPolicy
         });
 
 

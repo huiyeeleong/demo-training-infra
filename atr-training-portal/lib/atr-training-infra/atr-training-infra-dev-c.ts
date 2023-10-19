@@ -138,6 +138,7 @@ export class ATRTrainingInfraDevC extends Stack {
         const fileSystem = new efs.FileSystem(this, 'EfsFileSystemDevC', {
             vpc: existingVpc,
             securityGroup: efsSecurityGroup,
+            allowAnonymousAccess: true,
             lifecyclePolicy: efs.LifecyclePolicy.AFTER_30_DAYS, // or another appropriate policy
             removalPolicy: RemovalPolicy.DESTROY, // This will delete the EFS file system when the stack is deleted
             vpcSubnets: { subnetType: SubnetType.PRIVATE_WITH_EGRESS } 
