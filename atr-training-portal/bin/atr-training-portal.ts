@@ -19,72 +19,72 @@ const app = new cdk.App();
 
 new CodeCommitSetupStackDevA(app, 'CodeCommitSetupStackDevA', {
     env: {
-        account: '882636998479',
-        region: 'ap-southeast-2'
+        account: '354404802106',
+        region: 'us-east-1'
       }
 });
 new CodeCommitSetupStackDevB(app, 'CodeCommitSetupStackDevB', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 new CodeCommitSetupStackDevC(app, 'CodeCommitSetupStackDevC', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 new TrainingCodePipelineA(app, 'TrainingCodePipelineA', {
-    env: {
-        account: '882636998479',
-        region: 'ap-southeast-2'
-      }
+  env: {
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 new TrainingCodePipelineB(app, 'TrainingCodePipelineB', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 new TrainingCodePipelineC(app, 'TrainingCodePipelineC', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 
 new ATRTrainingVPC(app, 'ATRTrainingVPC', {
-    env: {
-        account: '882636998479',
-        region: 'ap-southeast-2'
-      }
+  env: {
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 
 new ATRTrainingInfraDevA(app, 'ATRTrainingInfraDevA', {
-    env: {
-        account: '882636998479',
-        region: 'ap-southeast-2'
-      }
+  env: {
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 
 new ATRTrainingInfraDevB(app, 'ATRTrainingInfraDevB', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 
 new ATRTrainingInfraDevC(app, 'ATRTrainingInfraDevC', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
 
 new ATRApiGWStack(app, 'ATRApiGWStack', {
   env: {
-      account: '882636998479',
-      region: 'ap-southeast-2'
-    }
+    account: '354404802106',
+    region: 'us-east-1'
+  }
 });
