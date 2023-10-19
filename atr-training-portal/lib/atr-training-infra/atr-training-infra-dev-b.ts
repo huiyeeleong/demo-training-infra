@@ -59,7 +59,7 @@ export class ATRTrainingInfraDevB extends Stack {
           });
 
         const container = taskDefinition.addContainer('ATRTrainingContainerDevB', {
-            image: ecs.ContainerImage.fromRegistry("882636998479.dkr.ecr.ap-southeast-2.amazonaws.com/atr-training-ecr-b:latest"),
+            image: ecs.ContainerImage.fromRegistry("354404802106.dkr.ecr.us-east-1.amazonaws.com/atr-training-ecr-b:latest"),
             memoryLimitMiB: 512,
             logging: new ecs.AwsLogDriver({
               streamPrefix: 'FargateDevB',
