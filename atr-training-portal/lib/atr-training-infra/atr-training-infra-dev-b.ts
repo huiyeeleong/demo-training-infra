@@ -68,7 +68,7 @@ export class ATRTrainingInfraDevB extends Stack {
         });
 
         container.addPortMappings({
-            containerPort: 80
+            containerPort: 3000
         });
 
         // Ensure you have defined the 'sg' (Security Group)
